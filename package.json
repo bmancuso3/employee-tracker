@@ -1,0 +1,18 @@
+{
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "description": "## Description Command-line app to help small companies manage their employees, from ice cream shops to Viking raids! UT Austin Coding Bootcamp Challenge 12.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "inquirer": "^9.2.11",
+    "mysql2": "^2.2.5"
+  }
+}
