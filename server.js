@@ -15,7 +15,7 @@ const {
 
 
 // Question array
-const questions = [
+const question = [
     {
         type: 'list',
         message: 'What would you like to do?',
@@ -26,11 +26,15 @@ const questions = [
 
 // Function to initialize questions for user
 function init() {
+    console.log(' ');
     console.log('========== WELCOME TO EMPLOYEE MANAGER! ==========');
+    console.log(' ');
+
     inquirer
-        .prompt (questions)
-        .then ((answers) => {
-            console.log('init', answers);
+        .prompt (question)
+        
+        .then ((answer) => {
+            console.log('init', answer);
         });
 };
 
