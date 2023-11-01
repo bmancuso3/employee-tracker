@@ -14,7 +14,7 @@ connection.connect((error) => {
         console.log('Error connecting to database', error);
         return
     }
-    console.log(`Connected to the database.`)
+    console.log(`Connected to employee management database.`)
 });
 
 
