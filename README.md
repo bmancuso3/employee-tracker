@@ -47,8 +47,8 @@ THEN I am prompted to select an employee to update and their new role and this i
 3. Express
 4. MySQL
 5. Inquirer
+. dotenv
 . Heroku
-. npm
 
 ## References
 1. UTA Bootcamp curriculum, instructor examples and student solved examples
