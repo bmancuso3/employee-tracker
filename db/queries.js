@@ -19,10 +19,10 @@ function getAllDepartments() {
 
 module.exports = {
     getAllDepartments,
-    getAllRoles,
-    getAllEmployees,
-    addDepartment,
-    addRole,
-    addEmployee,
-    exit
+    // getAllRoles,
+    // getAllEmployees,
+    // addDepartment,
+    // addRole,
+    // addEmployee,
+    // exit
 }

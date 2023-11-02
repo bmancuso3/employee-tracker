@@ -4,13 +4,13 @@ const express = require('express');
 const mysql = require('mysql2');
 const {
     getAllDepartments,
-    getAllRoles,
-    getAllEmployees,
-    addDepartment,
-    addRole,
-    addEmployee,
-    updateRole,
-    exit
+    // getAllRoles,
+    // getAllEmployees,
+    // addDepartment,
+    // addRole,
+    // addEmployee,
+    // updateRole,
+    // exit
 } = require('./db/queries');
 
 
@@ -35,6 +35,19 @@ function init() {
         
         .then ((answer) => {
             console.log('init', answer);
+            switch (answer.taskOne) {
+                case "view all departments":
+                    getAllDepartments((err, results) => {
+                        if (err) {
+                            console.log(err);
+                        }
+                        else {
+                            console.table(results);
+                        };
+                    });
+                    break;
+                // case
+            };
         });
 };
 
