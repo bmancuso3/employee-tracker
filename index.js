@@ -4,13 +4,13 @@ const express = require('express');
 const mysql = require('mysql2');
 const {
     getAllDepartments,
-    // getAllRoles,
+    getAllRoles,
     // getAllEmployees,
     // addDepartment,
     // addRole,
     // addEmployee,
     // updateRole,
-    // exit
+    exit
 } = require('./db/queries');
 
 
@@ -34,7 +34,7 @@ function init() {
         .prompt (question)
         
         .then ((answer) => {
-            console.log('init', answer);
+            // console.log('init', answer);
             switch (answer.taskOne) {
                 case "view all departments":
                     getAllDepartments((err, results) => {
@@ -42,11 +42,24 @@ function init() {
                             console.log(err);
                         }
                         else {
-                            console.table(results);
+                            init();
                         };
                     });
                     break;
-                // case
+
+                case "view all roles":
+                    getAllRoles((err, results) => {
+                        if (err) {
+                            console.log(err);
+                        }
+                        else {
+                            init();
+                        };
+                    });
+                    break;
+
+                case "exit":
+                    exit();
             };
         });
 };

@@ -1,7 +1,7 @@
 USE bv4dkp6qv73a9k05;
 
 -- view all departments (dep_name, dep id)
-SELECT * FROM department;
+SELECT id, dep_name AS department FROM department;
 
 -- view all roles (job title, role id, dep, salary)
 SELECT role.id, role.title, department.dep_name, role.salary
@@ -23,7 +23,7 @@ INSERT INTO department (dep_name)
 INSERT INTO role (title, salary, dep_id)
 	VALUES
     ("new Viking", 300, 3);
-    
+
 -- add an employee (input first name, last name, select role, select manager (from correct dep?))
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 	VALUES
