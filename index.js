@@ -69,7 +69,7 @@ function nextQuestion() {
                             console.log(err);
                         }
                         else {
-                            // console.table(results);
+                            console.table(results);
                             nextQuestion();
                         };
                     });
