@@ -5,8 +5,8 @@ const mysql = require('mysql2');
 const {
     getAllDepartments,
     getAllRoles,
-    // getAllEmployees,
-    // addDepartment,
+    getAllEmployees,
+    addDepartment,
     // addRole,
     // addEmployee,
     // updateRole,
@@ -29,7 +29,10 @@ function init() {
     console.log(' ');
     console.log('========== WELCOME TO EMPLOYEE MANAGER! ==========');
     console.log(' ');
+    nextQuestion();
+};
 
+function nextQuestion() {
     inquirer
         .prompt (question)
         
@@ -42,7 +45,8 @@ function init() {
                             console.log(err);
                         }
                         else {
-                            init();
+                            console.table(results);
+                            nextQuestion();
                         };
                     });
                     break;
@@ -53,10 +57,35 @@ function init() {
                             console.log(err);
                         }
                         else {
-                            init();
+                            console.table(results);
+                            nextQuestion();
                         };
                     });
                     break;
+
+                case "view all employees":
+                    getAllEmployees((err, results) => {
+                        if (err) {
+                            console.log(err);
+                        }
+                        else {
+                            // console.table(results);
+                            nextQuestion();
+                        };
+                    });
+                    break;
+
+                    case "add a department":
+                        addDepartment((err, results) => {
+                            if (err) {
+                                console.log(err);
+                            }
+                            else {
+                                console.table(results);
+                                nextQuestion();
+                            };
+                        });
+                        break;
 
                 case "exit":
                     exit();
@@ -66,10 +95,3 @@ function init() {
 
 // Call to initialize app
 init();
-
-
-// class recording 
-// end of day thursday, 26 oct @ 2:17 pm
-
-// process
-// schema, seeds, queries in workbench, then put it in js and work it
