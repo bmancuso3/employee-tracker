@@ -13,6 +13,10 @@ UT Austin Coding Bootcamp Challenge 12.
 * [Preview](#preview)
 * [License](#license)
 
+## Development Goals
+1. Continued functionality improvements, to include Add Role, Add Employee, and Deletes for all three tables
+2. Refined table display (removing the index column)
+
 ## User Story
 ```
 AS A business owner
@@ -52,21 +56,19 @@ THEN I am prompted to select an employee to update and their new role and this i
 
 ## References
 1. UTA Bootcamp curriculum, instructor examples and student solved examples
-2. Andres Miro - helped with class creation and property assignment
-3. Basic SVG shape components and theory - <a href='https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes'>mdn web docs</a>
+
 
 ## Links
 ### <a href="https://github.com/bmancuso3/employee-tracker">GitHub Repository</a>
 
 ### <a href="https://bmancuso3.github.io/employee-tracker">Live Site - Not Applicable</a>
 
-### <a href="https://drive.google.com/file/d/1i4w-h0pWKxindg4VEiuMEb8uMyrDsiaH/view">Video Walk-Through</a>
+### <a href="https://drive.google.com/file/d/1r4sJ7SeQ8Ho1jMCjRZQ_o6aL_e70kV0K/view">Video Walk-Through</a>
 
 ## Preview
 
 ### EX1
-<img src='./examples/gen-logo-EX1.svg' alt='EX1'/>
-
+<img src='./images/functionality_preview.png' alt='EX1'/>
 
 ## License
 <img src='https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge'>
